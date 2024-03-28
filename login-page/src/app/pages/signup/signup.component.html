@@ -1,7 +1,7 @@
 <app-default-login-layout
-    title="Faça seu cadastro!"
-    primaryButtonText="Inscreva-se agora"
-    secondaryButtonText="Conecte-se agora"
+    title="Faça seu cadastro"
+    primaryButtonText="Cadastre-se"
+    secondaryButtonText="Login"
     (submit)="submit()"
     (navigate)="navigate()"
     [disablePrimaryButton]="!signupForm.valid"
@@ -36,7 +36,7 @@
         >
             <img src="/assets/svg/password-icon.svg" />
         </app-primary-input>
-
+        
         <app-primary-input
             formControlName="passwordConfirm"
             inputName="passwordConfirm"

@@ -8,13 +8,15 @@
                 class="btn-primary" 
                 (click)="submit()"
                 [disabled]="disablePrimaryButton"
-                >{{primaryButtonText}}</button>
+                >
+                {{primaryButtonText}}
+            </button>
             <div class="divider">
                 <div></div>
                 <span>or</span>
                 <div></div>
             </div>
-        <button class="btn-secondary" (click)="navigate()">{{secondaryButtonText}}</button>
+            <button class="btn-secondary" (click)="navigate()">{{secondaryButtonText}}</button>
         </div>
     </section>
     <section class="main-section">

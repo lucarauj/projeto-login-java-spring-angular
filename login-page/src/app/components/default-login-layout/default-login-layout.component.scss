@@ -47,12 +47,11 @@ main {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 20px;
-                width: 100%;
-
                 font-size: 14px;
                 color: $text-color;
                 font-weight: 400;
+                gap: 20px; 
+                width: 100%;
                 text-transform: uppercase;
                 
 
@@ -84,7 +83,7 @@ main {
                 }
     
                 &.btn-secondary {
-                    border: 1px solid $secondary-color;
+                    border: 1px solid $primary-color;
                     color: $primary-color;
                 }
             }
