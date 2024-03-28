@@ -1,0 +1,28 @@
+<app-default-login-layout
+    title="Acesse sua conta"
+    primaryButtonText="Login"
+    secondaryButtonText="Register"
+>
+    <form [formGroup]="loginForm">
+        <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="example@email.com"        
+        >
+            <img src="/assets/svg/email-icon.svg" />
+        </app-primary-input>
+
+        <app-primary-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Senha"      
+        >
+            <img src="/assets/svg/password-icon.svg" />
+        </app-primary-input>
+        <span>Esqueci minha senha</span>
+    </form>
+
+</app-default-login-layout>
