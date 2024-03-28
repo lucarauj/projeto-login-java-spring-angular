@@ -5,6 +5,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 100%;
     
     section {
         height: 100%;
@@ -50,7 +51,7 @@ main {
                 width: 100%;
 
                 font-size: 14px;
-                color: $gray-bg;
+                color: $text-color;
                 font-weight: 400;
                 text-transform: uppercase;
                 
@@ -71,6 +72,10 @@ main {
                 background-color: transparent;
                 padding: 12px 24px;
                 cursor: pointer;
+
+                &:disabled {
+                    opacity: 0.8;
+                }
     
                 &.btn-primary {
                     background-color: $primary-color;
