@@ -27,3 +27,22 @@
 - H2 
 - Jwt
 
+<br>
+
+### Anotações
+
+- @Entity
+- @Table
+- @Getter
+- @Setter
+- @AllArgsConstructor
+- @NoArgsConstructor
+- @Id
+- @GeneratedValue
+- @Service
+- @Value
+- @Component
+- @RequiredArgsConstructor
+- @Configuration
+- @EnableWebSecurity
+- @Bean
