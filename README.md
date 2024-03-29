@@ -98,6 +98,11 @@
 
 <br>
 
+## Implementações feitas por mim
+
+- Tratamento de exceções
+- Regra de negócio na service
+
 <br>
 
 # 👨🏼‍🎓 Autor
