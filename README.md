@@ -46,3 +46,5 @@
 - @Configuration
 - @EnableWebSecurity
 - @Bean
+- @RestController
+- @RequestMapping
