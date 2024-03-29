@@ -48,3 +48,4 @@
 - @Bean
 - @RestController
 - @RequestMapping
+- @Configuration

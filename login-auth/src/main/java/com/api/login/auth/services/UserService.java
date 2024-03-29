@@ -46,7 +46,7 @@ public class UserService {
             String token = this.tokenService.generateToken(newUser);
             return new ResponseDTO(newUser.getName(), token);
         }
-        
+
         throw new Exception("Usuário já existe para o email informado.");
     }
 }
