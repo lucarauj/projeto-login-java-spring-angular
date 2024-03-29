@@ -14,3 +14,16 @@
 
 <br>
 
+## Estruturando o projeto Java Spring
+
+<br>
+
+### Dependências
+
+- Spring Web
+- Spring Data JPA
+- Spring Security
+- Lombok
+- H2 
+- Jwt
+
