@@ -2,6 +2,7 @@ package com.api.login.auth.controllers;
 
 import com.api.login.auth.dto.LoginRequestDTO;
 import com.api.login.auth.dto.RegisterRequestDTO;
+import com.api.login.auth.exceptions.RegraDeNegocioException;
 import com.api.login.auth.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -18,12 +19,12 @@ public class AuthController {
     private final UserService userService;
 
     @PostMapping("/login")
-    public ResponseEntity login(@RequestBody LoginRequestDTO body) throws Exception {
+    public ResponseEntity login(@RequestBody LoginRequestDTO body) throws RegraDeNegocioException {
         return ResponseEntity.ok().body(userService.login(body));
     }
 
     @PostMapping("/register")
-    public ResponseEntity register(@RequestBody RegisterRequestDTO body) throws Exception {
+    public ResponseEntity register(@RequestBody RegisterRequestDTO body) throws RegraDeNegocioException {
         return ResponseEntity.ok().body(userService.register(body));
     }
 }

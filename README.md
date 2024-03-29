@@ -11,6 +11,8 @@
 - ng g c components/primary-input
 - ng g s services/login
 - npm install ngx-toastr
+- ng g c pages/user
+- ng g s services/auth-guard
 
 <br>
 
@@ -26,6 +28,7 @@
 - Lombok
 - H2 
 - Jwt
+- Validation
 
 <br>
 

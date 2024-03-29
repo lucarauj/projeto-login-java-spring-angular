@@ -4,6 +4,7 @@ import com.api.login.auth.domain.User;
 import com.api.login.auth.dto.ResponseDTO;
 import com.api.login.auth.dto.LoginRequestDTO;
 import com.api.login.auth.dto.RegisterRequestDTO;
+import com.api.login.auth.exceptions.RegraDeNegocioException;
 import com.api.login.auth.infra.security.TokenService;
 import com.api.login.auth.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -20,19 +21,19 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
 
-    public ResponseDTO login(LoginRequestDTO body) throws Exception {
+    public ResponseDTO login(LoginRequestDTO body) throws RegraDeNegocioException {
 
-        User user = this.repository.findByEmail(body.email()).orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+        User user = this.repository.findByEmail(body.email()).orElseThrow(() -> new RegraDeNegocioException("Usuário não encontrado"));
 
         if(passwordEncoder.matches(body.password(), user.getPassword())) {
             String token = this.tokenService.generateToken(user);
             return new ResponseDTO(user.getName(), token);
         }
 
-        throw new Exception("Senha inválida.");
+        throw new RegraDeNegocioException("Senha inválida.");
     }
 
-    public ResponseDTO register(RegisterRequestDTO body) throws Exception {
+    public ResponseDTO register(RegisterRequestDTO body) throws RegraDeNegocioException {
 
         Optional<User> user = this.repository.findByEmail(body.email());
 
@@ -47,6 +48,6 @@ public class UserService {
             return new ResponseDTO(newUser.getName(), token);
         }
 
-        throw new Exception("Usuário já existe para o email informado.");
+        throw new RegraDeNegocioException("Usuário já existe para o email informado.");
     }
 }
