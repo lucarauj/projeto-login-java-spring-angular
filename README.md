@@ -102,6 +102,7 @@
 
 - Tratamento de exceções
 - Regra de negócio na service
+- Encaminha usuário para área logada ao fazer login com sucesso
 
 <br>
 
